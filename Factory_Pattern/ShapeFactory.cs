@@ -16,6 +16,8 @@ namespace Factory_Pattern
                     return new Rectangle();
                 case "circle":
                     return new Circle();
+                case "line":
+                    return new Line();
             }
             return null;
         }

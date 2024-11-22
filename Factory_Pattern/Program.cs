@@ -10,12 +10,13 @@ namespace Factory_Pattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter Rectangle or Circle ...");
+            Console.WriteLine("Please enter Rectangle or Circle or Line ...");
             string type = Console.ReadLine();
 
             ShapeFactory shapeFactory = new ShapeFactory();
             IShape shape = shapeFactory.GetShape(type);
-            shape.DrawShape();
+            if (shape != null) 
+                shape.DrawShape();
 
             Console.ReadKey();
 
